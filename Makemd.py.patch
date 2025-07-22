@@ -1,0 +1,11 @@
+--- Makemd.py	2025-07-20 00:45:52.000000000 +0200
++++ Makemd.mod.py	2025-07-21 21:29:37.269869918 +0200
+@@ -248,7 +248,7 @@
+ 
+     if paperIsMarkdown:
+         paperHtml = paperHtml.replace(
+-            "$body$", "<div class='md-article-area'>$body$</div>"
++            "$body$", '<input type="checkbox" id="dark-mode-toggle" /><label for="dark-mode-toggle" id="dark-mode-label">Dark Mode</label><div class="md-article-area">$body$</div>'
+         )
+     else:
+         paperHtml = paperHtml.replace("$body$", "<pre>$body$</pre>")

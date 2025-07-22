@@ -1,0 +1,79 @@
+--- style.css	2025-07-20 00:45:52.000000000 +0200
++++ style.mod.css	2025-07-21 23:24:38.885486172 +0200
+@@ -403,12 +403,6 @@
+ 	margin-top: 6px;
+ }
+ 
+-.md-article-area.dark,
+-pre.dark {
+-	background-color: #333;
+-	color: white;
+-}
+-
+ .md-article-area>pre {
+ 	padding: unset !important;
+ }
+@@ -424,4 +418,61 @@
+ 	border: unset !important;
+ 	padding: unset !important;
+ 	background-color: unset !important;
+-}
+\ Pas de fin de ligne à la fin du fichier
++}
++
++/******************************
++ * Dark Theme code for PHRACK *
++ * Made by Jiab77             *
++ *                            *
++ * Version 0.0.0              *
++ ******************************/
++
++ #dark-mode-label {
++   margin-left: 5px;
++   font-weight: bold;
++   cursor: pointer;
++ }
++ #dark-mode-toggle {
++   width: unset;
++   vertical-align: text-top;
++ }
++ #dark-mode-toggle:checked ~ .md-article-area {
++   background-color: #333;
++   color: white;
++ }
++ #dark-mode-toggle:checked ~ .md-article-area>pre {
++   background-color: #333;
++   color: white;
++ }
++ #dark-mode-toggle:checked ~ .md-article-area .codehilite {
++   background: unset !important;
++ }
++ #dark-mode-toggle:checked ~ .md-article-area .codehilite>pre {
++   color: black;
++   border: 1px solid gray;
++ }
++ #dark-mode-toggle:checked ~ .md-article-area blockquote {
++   background-color: #e2e2e2;
++   color: rgba(0, 0, 0, .7);
++ }
++
++ @media (prefers-color-scheme: dark) {
++   #dark-mode-toggle, #dark-mode-label {
++     display: none;
++   }
++   .md-article-area, pre {
++     background-color: #333;
++     color: white;
++   }
++   .md-article-area blockquote {
++     background-color: #e2e2e2;
++     color: rgba(0, 0, 0, .7);
++   }
++   .codehilite {
++     background: unset !important;
++   }
++   .codehilite>pre {
++     color: black;
++     border: 1px solid gray;
++   }
++}
